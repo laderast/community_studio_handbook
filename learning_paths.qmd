@@ -56,9 +56,12 @@ We need to learn about the different types of nodes, how we can use them, and ho
 
 What you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.
 
+## WDL/Docker/Singularity
 
-## WDL/Docker
+Wow, we've come really far!
+
 
 You're probably familiar with the issue of reproducing an analysis - a large part is reproducing the software environment that was used in the original analysis. The chain of software dependencies can affect whether or not a script can run in a different software environment. 
 
 Enter containers, which let you freeze version of your software packages and environment so your scripts will run exactly as intended on any machine. This males your tools portable and is another step in making your work reproducible. 
+
