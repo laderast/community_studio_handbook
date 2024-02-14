@@ -1,0 +1,39 @@
+---
+title: "Learning Paths"
+---
+
+## My Own Learning Journey
+
+It took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.   
+
+I think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC
+
+- Up your bash skills
+- Bash Scripting
+- Learning about HPC concepts and allocations
+- Up your lnowledge about filesystems and naming
+- WDL and Docker for reproducibility
+- Scattering your data and bringing it back together
+
+
+## Up Your Shell Skills
+
+Let's face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs. 
+
+Let's throw back the curtain once and for all - this is all knowledge you can pick up. 
+
+## Bash Scripting to Automate the Boring Things
+
+Now we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line. 
+
+It all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command.  Once we learn that, we can start building larger pipelines to process files. 
+
+Then we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines. 
+
+## Learn HPC Concepts
+
+We've done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it. 
+
+Clusters are ruled by a *head node*
+
+ 

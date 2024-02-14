@@ -1,0 +1,132 @@
+[
+  {
+    "objectID": "intro.html",
+    "href": "intro.html",
+    "title": "1  Introduction",
+    "section": "",
+    "text": "2 Getting better and upskilling\nOne of the things that has prevented me from getting better at things is the fear of looking foolish. It’s a hard feeling to shake. I still get this feeling from time to time.\nWhat is the antidote? I think that the answer lies in finding and participating in a supportive community. A community where it is safe to ask questions and not feel foolish. A community full of supportive people like me, who want to help me and are invested in my growth.\nThat’s what I want to help build at the Hutch. A group where we all want to upskilll and learn new things that help us kick ass. Where it’s ok to not know everything, because we know something and want to share.\nI think a big part of this is to establish values as a community. I’d like to avoid the situation where someone asks “Why didn’t you use X?” which I’ve always found accusatory, unsupportive, and unhelpful, especially coming from the mouths of principal investigators.\nSo I hope you’ll considering joining me in participating in this new learning community.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "intro.html#making-mistakes-is-ok",
+    "href": "intro.html#making-mistakes-is-ok",
+    "title": "1  Introduction",
+    "section": "2.1 Making Mistakes is OK",
+    "text": "2.1 Making Mistakes is OK\nI’ve learned that to get better, you have to be willing to make a lot of mistakes. This is especially true when you are learning to speak a new language.\nAgain, it’s OK not to know how to do things. We have to remember that we are all beginners at something and experts at other things. Let’s be respectful of that.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html",
+    "href": "learning_paths.html",
+    "title": "2  Learning Paths",
+    "section": "",
+    "text": "2.1 My Own Learning Journey\nIt took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.\nI think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#my-own-learning-journey",
+    "href": "learning_paths.html#my-own-learning-journey",
+    "title": "2  Learning Paths",
+    "section": "",
+    "text": "Up your bash skills\nBash Scripting\nLearning about HPC concepts and allocations\nUp your lnowledge about filesystems and naming\nWDL and Docker for reproducibility\nScattering your data and bringing it back together",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#up-your-shell-skills",
+    "href": "learning_paths.html#up-your-shell-skills",
+    "title": "2  Learning Paths",
+    "section": "2.2 Up Your Shell Skills",
+    "text": "2.2 Up Your Shell Skills\nLet’s face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs.\nLet’s throw back the curtain once and for all - this is all knowledge you can pick up.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#bash-scripting-to-automate-the-boring-things",
+    "href": "learning_paths.html#bash-scripting-to-automate-the-boring-things",
+    "title": "2  Learning Paths",
+    "section": "2.3 Bash Scripting to Automate the Boring Things",
+    "text": "2.3 Bash Scripting to Automate the Boring Things\nNow we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.\nIt all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.\nThen we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#learn-hpc-concepts",
+    "href": "learning_paths.html#learn-hpc-concepts",
+    "title": "2  Learning Paths",
+    "section": "2.4 Learn HPC Concepts",
+    "text": "2.4 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "getting_good_with_the_shell.html",
+    "href": "getting_good_with_the_shell.html",
+    "title": "3  Getting good with the Shell",
+    "section": "",
+    "text": "3.1 Resources\nThe two best resources I can think of are:\nI plan on expanding my book Bash for Bioinformatics with more recipes for those wanting to upskill to HPC and Workflow Description Language (WDL).",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting good with the Shell</span>"
+    ]
+  },
+  {
+    "objectID": "getting_good_with_the_shell.html#resources",
+    "href": "getting_good_with_the_shell.html#resources",
+    "title": "3  Getting good with the Shell",
+    "section": "",
+    "text": "The Missing Semester of your CS Education\nData Science on the Command Line.",
+    "crumbs": [
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Getting good with the Shell</span>"
+    ]
+  },
+  {
+    "objectID": "wdl_for_you_and_me.html",
+    "href": "wdl_for_you_and_me.html",
+    "title": "4  WDL for you and me",
+    "section": "",
+    "text": "4.1 What is WDL?\nWorkflow Description Language (WDL) is a way to describe a processing pipeline",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>WDL for you and me</span>"
+    ]
+  },
+  {
+    "objectID": "wdl_for_you_and_me.html#how-is-it-different-from-workflows-like-snakemake",
+    "href": "wdl_for_you_and_me.html#how-is-it-different-from-workflows-like-snakemake",
+    "title": "4  WDL for you and me",
+    "section": "4.2 How is it different from workflows like Snakemake?",
+    "text": "4.2 How is it different from workflows like Snakemake?\nWDL leverages reproducible software environments called containers rather than relying on pre-installed software. File paths to installed software may not be consistent, and creating a combination of software packages that work on another system can be difficult.\nBy bundling software and their dependencies into a container, the same exact software environment can be reproduced across multiple machines and operating systems.\nTheoretically, given a WDL file, you should be able to reproduce and scale an analysis pipeline.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>WDL for you and me</span>"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "A DaSL Community Handbook",
+    "section": "",
+    "text": "1 Introduction\nHi, my name is Ted Laderas, and I consider myself an educator/community builder first, and a bioinformatician second. I’ve worked with HPC and cloud platforms for doing bioinformatics work, and I want to help you get better at these skills. I believe that if you want to learn to get better at data science, you deserve an opportunity to expand and grow.\nI started my journey a long time ago when most of the skills at the command line I learned off the street. But things don’t have to be that way.\nI hope to encourage and grow the developer community at Fred Hutch into getting better at what they need to do. I know that every one of us is unique, but our commonality is that we want to learn new things. And I know that learning together is one of the most powerful ways to grow.\nThis means carving out a space where it’s ok to ask questions of things that really aren’t obvious but that we pretend that are. I think that a lot of us think we should know something,",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#making-mistakes-is-ok",
+    "href": "index.html#making-mistakes-is-ok",
+    "title": "A DaSL Community Handbook",
+    "section": "2.1 Making Mistakes is OK",
+    "text": "2.1 Making Mistakes is OK\nI’ve learned that to get better, you have to be willing to make a lot of mistakes. This is especially true when you are learning to speak a new language.\nAgain, it’s OK not to know how to do things. We have to remember that we are all beginners at something and experts at other things. Let’s be respectful of that.",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  }
+]

@@ -1,0 +1,48 @@
+---
+title: "Getting good with the Shell"
+---
+
+1. **When you run something on the command-line, you don't have to stay logged in.** You've probably encountered the fact that running a script requires your connection to be open.  
+
+Putting a `nohup` and adding an `ampersand` after the command will let you run it in the background and it will happily continue when you log out. For example, if I were running an R job, I could do the following:
+
+```
+nohup Rscript my_notebook.qmd &
+```
+
+`nohup` is short for "No hangup" and it will prevent the shell from terminating your process when you signout. 
+
+Even better: learning how to use either `screen` or `tmux`, which are called window managers and can make your life even simpler. Both of these will let you persist a session even when you're logged out.
+
+Even Even better: Scheduling your processes to cycle over files in the cluster.
+
+2. **<TAB> and <UP-ARROW> are your friend.** This is probably the most useful timesave. Unix will try to autocomplete every time you hit tab with an unfinished path or command. For example, I could type:
+
+```
+ls /users/laderast/my_<TAB>
+```
+
+and Unix will try to complete this. Unix loves long filepaths, so save yourself some typing. 
+
+Similarly, if you didn't know that you can cycle through your previous commands using the <UP-ARROW> key, then try it out. 
+
+3. **How to install your own software on a Linux machine without root access.** There are tools that exist such as Miniconda, that will let you install tools on a machine. Learning how to use this and how to add Miniconda binaries to your `$PATH` variable will get you very far. 
+
+Even better: learning how to use Docker/Singularity, which lets you use those containers you may have heard so much about.
+
+4. Using the right workflow tool for the right job. 
+
+Getting strong at Linux is a lifelong process. The software ecosystem is extensive and everyone has an opinion about how to solve particular problems. I'll try to highlight a *happy* path that is less confusing. 
+
+5. Moving from a script to workflow
+
+I think one of the hardest things when you are upskilling is realizing when a script could potentially be transformed into a workflow. 
+
+## Resources
+
+The two best resources I can think of are:
+
+- [The Missing Semester of your CS Education](https://missing.csail.mit.edu/) 
+- [Data Science on the Command Line](https://jeroenjanssens.com/dsatcl/).
+
+I plan on expanding my book [Bash for Bioinformatics](https://laderast.github.io/bash_for_bioinformatics) with more recipes for those wanting to upskill to HPC and Workflow Description Language (WDL). 

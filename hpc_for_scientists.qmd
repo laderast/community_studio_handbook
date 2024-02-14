@@ -1,0 +1,29 @@
+---
+title: "HPC for Scientists"
+format: html
+---
+
+You may have started to access an HPC system 
+
+I hope to give you a foundation of key HPC concepts and how they can help you.
+
+## The main players
+
+- **Head Node**: this node controls access to the other nodes in the cluster, which are called *worker nodes*
+- **Worker Node**: a member of a HPC cluster
+- **Shared Filesystem** - a distributed filesystem that can be seen by all of the nodes in a cluster. Examples include Lustre.
+- **Scratch Filesystem** - the "local" storage of a worker node
+
+## An HPC workflow
+
+High Performance Computing clusters are shared resources. We at the Hutch have to share the computing resources with others.
+
+
+## HPCs contain many many machines with different specifications
+
+
+
+
+## Break it Up
+
+A lot of times, when we do genomics work, we want to process many files at a time. For example, we might want to 

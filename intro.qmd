@@ -1,0 +1,31 @@
+---
+title: "Introduction"
+format: html
+---
+
+Hi, my name is Ted Laderas, and I consider myself an educator/community builder first, and a bioinformatician second. I've worked with HPC and cloud platforms for doing bioinformatics work, and I want to help you get better at these skills. I believe that if you want to learn to get better at data science, you deserve an opportunity to expand and grow.
+
+I started my journey a long time ago when most of the skills at the command line I learned off the street. But things don't have to be that way.
+
+I hope to encourage and grow the developer community at Fred Hutch into getting better at what they need to do. I know that every one of us is unique, but our commonality is that we want to learn new things. And I know that learning together is one of the most powerful ways to grow. 
+
+This means carving out a space where it's ok to ask questions of things that really aren't obvious but that we pretend that are. I think that a lot of us think we *should* know something, 
+
+# Getting better and upskilling
+
+One of the things that has prevented me from getting better at things is the fear of looking foolish. It's a hard feeling to shake. I still get this feeling from time to time. 
+
+What is the antidote? I think that the answer lies in finding and participating in a supportive community. A community where it is safe to ask questions and not feel foolish. A community full of supportive people like me, who want to help me and are invested in my growth. 
+
+That's what I want to help build at the Hutch. A group where we all want to upskilll and learn new things that help us kick ass. Where it's ok to not know everything, because we know something and want to share. 
+
+I think a big part of this is to establish values as a community. I'd like to avoid the situation where someone asks "Why didn't you use X?" which I've always found accusatory, unsupportive, and unhelpful, especially coming from the mouths of principal investigators. 
+
+So I hope you'll considering joining me in participating in this new learning community. 
+
+## Making Mistakes is OK
+
+I've learned that to get better, you have to be willing to make a **lot** of mistakes. This is especially true when you are learning to speak a new language. 
+
+Again, it's OK not to know how to do things. We have to remember that we are all beginners at something and experts at  other things. Let's be respectful of that. 
+

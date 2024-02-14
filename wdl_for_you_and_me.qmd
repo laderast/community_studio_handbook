@@ -1,0 +1,17 @@
+---
+title: "WDL for you and me"
+format: html
+---
+
+## What is WDL?
+
+Workflow Description Language (WDL) is a way to describe a processing pipeline
+
+## How is it different from workflows like Snakemake?
+
+WDL leverages reproducible software environments called containers rather than relying on pre-installed software. File paths to installed software may not be consistent, and creating a combination of software packages that work on another system can be difficult.
+
+By bundling software and their dependencies into a *container*, the same exact software environment can be reproduced across multiple machines and operating systems.
+
+Theoretically, given a WDL file, you should be able to reproduce and scale an analysis pipeline.
+
