@@ -24,7 +24,7 @@
     "href": "learning_paths.html",
     "title": "2  Learning Paths",
     "section": "",
-    "text": "2.1 My Own Learning Journey\nIt took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.\nI think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC",
+    "text": "2.1 The Purpose of This Chapter\nThe purpose of this chapter is to list skills that are necessary to be successful in reproducibly running workflows on a High Performance Computing Cluster.\nThis chapter exists to help you find out what you know and what you might want to know. Each skill highlights what you can accomplish once you’ve mastered it.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -43,8 +43,8 @@
     "objectID": "learning_paths.html#up-your-shell-skills",
     "href": "learning_paths.html#up-your-shell-skills",
     "title": "2  Learning Paths",
-    "section": "2.2 Up Your Shell Skills",
-    "text": "2.2 Up Your Shell Skills\nLet’s face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs.\nLet’s throw back the curtain once and for all - this is all knowledge you can pick up.",
+    "section": "2.3 Up Your Shell Skills",
+    "text": "2.3 Up Your Shell Skills\nLet’s face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs.\nLet’s throw back the curtain once and for all - this is all knowledge you can pick up and excel at.\nWhat you can do now: Run background processes while being signed out, navigate relative paths, use keyboard shortcuts such as tab completion and history.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -53,8 +53,8 @@
     "objectID": "learning_paths.html#bash-scripting-to-automate-the-boring-things",
     "href": "learning_paths.html#bash-scripting-to-automate-the-boring-things",
     "title": "2  Learning Paths",
-    "section": "2.3 Bash Scripting to Automate the Boring Things",
-    "text": "2.3 Bash Scripting to Automate the Boring Things\nNow we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.\nIt all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.\nThen we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines.",
+    "section": "2.4 Bash Scripting to Automate the Boring Things",
+    "text": "2.4 Bash Scripting to Automate the Boring Things\nNow we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.\nIt all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.\nThen we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines.\nWhat you can do now: Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -63,8 +63,8 @@
     "objectID": "learning_paths.html#learn-hpc-concepts",
     "href": "learning_paths.html#learn-hpc-concepts",
     "title": "2  Learning Paths",
-    "section": "2.4 Learn HPC Concepts",
-    "text": "2.4 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.",
+    "section": "2.6 Learn HPC Concepts",
+    "text": "2.6 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.\nWhat you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -177,6 +177,26 @@
     "text": "4.4 Break it Up\nA lot of times, when we do genomics work, we want to process many files at a time. For example, we might want to",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#a-learning-path-to-hpc",
+    "href": "learning_paths.html#a-learning-path-to-hpc",
+    "title": "2  Learning Paths",
+    "section": "2.2 A Learning Path to HPC",
+    "text": "2.2 A Learning Path to HPC\nIt took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.\nI think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC. Here’s the list:\n\nUp your bash skills\nBash Scripting\nLearning about HPC concepts and allocations\nUp your knowledge about filesystems and naming\nWDL and Docker for reproducibility\nScattering your data and bringing it back together\n\nPart of the purpose of listing these skills is to help you find a starting point in your journey.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#up-your-knowledge-about-filesystems",
+    "href": "learning_paths.html#up-your-knowledge-about-filesystems",
+    "title": "2  Learning Paths",
+    "section": "2.5 Up Your Knowledge about Filesystems",
+    "text": "2.5 Up Your Knowledge about Filesystems\nWe want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
   }
 ]

@@ -146,10 +146,12 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#my-own-learning-journey" id="toc-my-own-learning-journey" class="nav-link active" data-scroll-target="#my-own-learning-journey"><span class="header-section-number">2.1</span> My Own Learning Journey</a></li>
-  <li><a href="#up-your-shell-skills" id="toc-up-your-shell-skills" class="nav-link" data-scroll-target="#up-your-shell-skills"><span class="header-section-number">2.2</span> Up Your Shell Skills</a></li>
-  <li><a href="#bash-scripting-to-automate-the-boring-things" id="toc-bash-scripting-to-automate-the-boring-things" class="nav-link" data-scroll-target="#bash-scripting-to-automate-the-boring-things"><span class="header-section-number">2.3</span> Bash Scripting to Automate the Boring Things</a></li>
-  <li><a href="#learn-hpc-concepts" id="toc-learn-hpc-concepts" class="nav-link" data-scroll-target="#learn-hpc-concepts"><span class="header-section-number">2.4</span> Learn HPC Concepts</a></li>
+  <li><a href="#the-purpose-of-this-chapter" id="toc-the-purpose-of-this-chapter" class="nav-link active" data-scroll-target="#the-purpose-of-this-chapter"><span class="header-section-number">2.1</span> The Purpose of This Chapter</a></li>
+  <li><a href="#a-learning-path-to-hpc" id="toc-a-learning-path-to-hpc" class="nav-link" data-scroll-target="#a-learning-path-to-hpc"><span class="header-section-number">2.2</span> A Learning Path to HPC</a></li>
+  <li><a href="#up-your-shell-skills" id="toc-up-your-shell-skills" class="nav-link" data-scroll-target="#up-your-shell-skills"><span class="header-section-number">2.3</span> Up Your Shell Skills</a></li>
+  <li><a href="#bash-scripting-to-automate-the-boring-things" id="toc-bash-scripting-to-automate-the-boring-things" class="nav-link" data-scroll-target="#bash-scripting-to-automate-the-boring-things"><span class="header-section-number">2.4</span> Bash Scripting to Automate the Boring Things</a></li>
+  <li><a href="#up-your-knowledge-about-filesystems" id="toc-up-your-knowledge-about-filesystems" class="nav-link" data-scroll-target="#up-your-knowledge-about-filesystems"><span class="header-section-number">2.5</span> Up Your Knowledge about Filesystems</a></li>
+  <li><a href="#learn-hpc-concepts" id="toc-learn-hpc-concepts" class="nav-link" data-scroll-target="#learn-hpc-concepts"><span class="header-section-number">2.6</span> Learn HPC Concepts</a></li>
   </ul>
 </nav>
     </div>
@@ -175,37 +177,50 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="my-own-learning-journey" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="my-own-learning-journey"><span class="header-section-number">2.1</span> My Own Learning Journey</h2>
+<section id="the-purpose-of-this-chapter" class="level2" data-number="2.1">
+<h2 data-number="2.1" class="anchored" data-anchor-id="the-purpose-of-this-chapter"><span class="header-section-number">2.1</span> The Purpose of This Chapter</h2>
+<p>The purpose of this chapter is to list skills that are necessary to be successful in reproducibly running workflows on a High Performance Computing Cluster.</p>
+<p>This chapter exists to help you find out what you know and what you might want to know. Each skill highlights what you can accomplish once you’ve mastered it.</p>
+</section>
+<section id="a-learning-path-to-hpc" class="level2" data-number="2.2">
+<h2 data-number="2.2" class="anchored" data-anchor-id="a-learning-path-to-hpc"><span class="header-section-number">2.2</span> A Learning Path to HPC</h2>
 <p>It took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.</p>
-<p>I think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC</p>
+<p>I think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC. Here’s the list:</p>
 <ul>
 <li>Up your bash skills</li>
 <li>Bash Scripting</li>
 <li>Learning about HPC concepts and allocations</li>
-<li>Up your lnowledge about filesystems and naming</li>
+<li>Up your knowledge about filesystems and naming</li>
 <li>WDL and Docker for reproducibility</li>
 <li>Scattering your data and bringing it back together</li>
 </ul>
+<p>Part of the purpose of listing these skills is to help you find a starting point in your journey.</p>
 </section>
-<section id="up-your-shell-skills" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="up-your-shell-skills"><span class="header-section-number">2.2</span> Up Your Shell Skills</h2>
+<section id="up-your-shell-skills" class="level2" data-number="2.3">
+<h2 data-number="2.3" class="anchored" data-anchor-id="up-your-shell-skills"><span class="header-section-number">2.3</span> Up Your Shell Skills</h2>
 <p>Let’s face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs.</p>
-<p>Let’s throw back the curtain once and for all - this is all knowledge you can pick up.</p>
+<p>Let’s throw back the curtain once and for all - this is all knowledge you can pick up and excel at.</p>
+<p>What you can do now: Run background processes while being signed out, navigate relative paths, use keyboard shortcuts such as tab completion and history.</p>
 </section>
-<section id="bash-scripting-to-automate-the-boring-things" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="bash-scripting-to-automate-the-boring-things"><span class="header-section-number">2.3</span> Bash Scripting to Automate the Boring Things</h2>
+<section id="bash-scripting-to-automate-the-boring-things" class="level2" data-number="2.4">
+<h2 data-number="2.4" class="anchored" data-anchor-id="bash-scripting-to-automate-the-boring-things"><span class="header-section-number">2.4</span> Bash Scripting to Automate the Boring Things</h2>
 <p>Now we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.</p>
 <p>It all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.</p>
 <p>Then we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines.</p>
+<p>What you can do now: Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.</p>
 </section>
-<section id="learn-hpc-concepts" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="learn-hpc-concepts"><span class="header-section-number">2.4</span> Learn HPC Concepts</h2>
+<section id="up-your-knowledge-about-filesystems" class="level2" data-number="2.5">
+<h2 data-number="2.5" class="anchored" data-anchor-id="up-your-knowledge-about-filesystems"><span class="header-section-number">2.5</span> Up Your Knowledge about Filesystems</h2>
+<p>We want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders.</p>
+</section>
+<section id="learn-hpc-concepts" class="level2" data-number="2.6">
+<h2 data-number="2.6" class="anchored" data-anchor-id="learn-hpc-concepts"><span class="header-section-number">2.6</span> Learn HPC Concepts</h2>
 <p>We’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.</p>
 <p>Clusters are ruled by a <em>head node</em>, which as you night guess, tells the other nodes (called <em>worker nodes</em> what to do. It does this by assigning <em>jobs</em> to groups of nodes. T3hese groups of nodes are also called <em>allocations</em>.</p>
 <p><em>Allocations</em> are requested by users when they <em>submit</em> a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.</p>
 <p><em>Jobs</em> can also have <em>subjobs</em>. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file</p>
 <p>The <em>Shared Filesystem</em> is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The <em>head node</em> is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called <em>scratch storage</em>) to run our job.</p>
+<p>What you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.</p>
 
 
 </section>
