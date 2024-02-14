@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A DaSL Community Handbook - 4&nbsp; WDL for you and me</title>
+<title>DaSL Community Handbook - 5&nbsp; WDL for you and me</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,7 +30,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./getting_good_with_the_shell.html" rel="prev">
+<link href="./hpc_for_scientists.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -80,7 +80,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wdl_for_you_and_me.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">WDL for you and me</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./wdl_for_you_and_me.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">WDL for you and me</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -95,7 +95,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">A DaSL Community Handbook</a> 
+      <a href="./">DaSL Community Handbook</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -108,12 +108,6 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Preface</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Introduction</span></span></a>
   </div>
 </li>
@@ -131,8 +125,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./hpc_for_scientists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./wdl_for_you_and_me.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">WDL for you and me</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">WDL for you and me</span></span></a>
   </div>
 </li>
     </ul>
@@ -145,8 +145,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#what-is-wdl" id="toc-what-is-wdl" class="nav-link active" data-scroll-target="#what-is-wdl"><span class="header-section-number">4.1</span> What is WDL?</a></li>
-  <li><a href="#how-is-it-different-from-workflows-like-snakemake" id="toc-how-is-it-different-from-workflows-like-snakemake" class="nav-link" data-scroll-target="#how-is-it-different-from-workflows-like-snakemake"><span class="header-section-number">4.2</span> How is it different from workflows like Snakemake?</a></li>
+  <li><a href="#what-is-wdl" id="toc-what-is-wdl" class="nav-link active" data-scroll-target="#what-is-wdl"><span class="header-section-number">5.1</span> What is WDL?</a></li>
+  <li><a href="#how-is-it-different-from-workflows-like-snakemake" id="toc-how-is-it-different-from-workflows-like-snakemake" class="nav-link" data-scroll-target="#how-is-it-different-from-workflows-like-snakemake"><span class="header-section-number">5.2</span> How is it different from workflows like Snakemake?</a></li>
   </ul>
 </nav>
     </div>
@@ -155,7 +155,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">WDL for you and me</span></h1>
+<h1 class="title"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">WDL for you and me</span></h1>
 </div>
 
 
@@ -172,12 +172,12 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="what-is-wdl" class="level2" data-number="4.1">
-<h2 data-number="4.1" class="anchored" data-anchor-id="what-is-wdl"><span class="header-section-number">4.1</span> What is WDL?</h2>
+<section id="what-is-wdl" class="level2" data-number="5.1">
+<h2 data-number="5.1" class="anchored" data-anchor-id="what-is-wdl"><span class="header-section-number">5.1</span> What is WDL?</h2>
 <p>Workflow Description Language (WDL) is a way to describe a processing pipeline</p>
 </section>
-<section id="how-is-it-different-from-workflows-like-snakemake" class="level2" data-number="4.2">
-<h2 data-number="4.2" class="anchored" data-anchor-id="how-is-it-different-from-workflows-like-snakemake"><span class="header-section-number">4.2</span> How is it different from workflows like Snakemake?</h2>
+<section id="how-is-it-different-from-workflows-like-snakemake" class="level2" data-number="5.2">
+<h2 data-number="5.2" class="anchored" data-anchor-id="how-is-it-different-from-workflows-like-snakemake"><span class="header-section-number">5.2</span> How is it different from workflows like Snakemake?</h2>
 <p>WDL leverages reproducible software environments called containers rather than relying on pre-installed software. File paths to installed software may not be consistent, and creating a combination of software packages that work on another system can be difficult.</p>
 <p>By bundling software and their dependencies into a <em>container</em>, the same exact software environment can be reproduced across multiple machines and operating systems.</p>
 <p>Theoretically, given a WDL file, you should be able to reproduce and scale an analysis pipeline.</p>
@@ -575,8 +575,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./getting_good_with_the_shell.html" class="pagination-link  aria-label=" &lt;span="" good="" with="" the="" shell&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting good with the Shell</span></span>
+      <a href="./hpc_for_scientists.html" class="pagination-link  aria-label=" &lt;span="" for="" scientists&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

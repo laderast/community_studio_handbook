@@ -3,13 +3,14 @@ project:
   output-dir: docs
 
 book:
-  title: "A DaSL Community Handbook"
+  title: "DaSL Community Handbook"
   author: "Ted Laderas"
   date: "2/14/2024"
   chapters:
     - index.qmd
     - learning_paths.qmd
     - getting_good_with_the_shell.qmd
+    - hpc_for_scientists.qmd
     - wdl_for_you_and_me.qmd
 
 bibliography: references.bib

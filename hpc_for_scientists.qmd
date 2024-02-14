@@ -11,15 +11,24 @@ I hope to give you a foundation of key HPC concepts and how they can help you.
 
 - **Head Node**: this node controls access to the other nodes in the cluster, which are called *worker nodes*
 - **Worker Node**: a member of a HPC cluster
+- **Allocation**: a set of nodes that meet a particular set of requirements that is requested by the user. For example, one kind of allocation might be to have 3 nodes with multiple GPUs for machine learning tasks.
 - **Shared Filesystem** - a distributed filesystem that can be seen by all of the nodes in a cluster. Examples include Lustre.
 - **Scratch Filesystem** - the "local" storage of a worker node
 
+## Relationships between the main players
+
+Clusters are ruled by a *head node*, which as you night guess, tells the other nodes (called *worker nodes* what to do. It does this by assigning *jobs* to groups of nodes. T3hese groups of nodes are also called *allocations*.  
+
+*Allocations* are requested by users when they *submit* a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation. 
+
+*Jobs* can also have *subjobs*. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file
+
+The *Shared Filesystem* is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The *head node* is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called *scratch storage*) to run our job.
+
 ## An HPC workflow
 
-High Performance Computing clusters are shared resources. We at the Hutch have to share the computing resources with others.
+High Performance Computing clusters are shared resources. We have to share computing resources with others.
 
-
-## HPCs contain many many machines with different specifications
 
 
 

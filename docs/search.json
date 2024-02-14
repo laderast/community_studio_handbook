@@ -64,7 +64,7 @@
     "href": "learning_paths.html#learn-hpc-concepts",
     "title": "2  Learning Paths",
     "section": "2.4 Learn HPC Concepts",
-    "text": "2.4 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node",
+    "text": "2.4 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -92,21 +92,21 @@
   {
     "objectID": "wdl_for_you_and_me.html",
     "href": "wdl_for_you_and_me.html",
-    "title": "4  WDL for you and me",
+    "title": "5  WDL for you and me",
     "section": "",
-    "text": "4.1 What is WDL?\nWorkflow Description Language (WDL) is a way to describe a processing pipeline",
+    "text": "5.1 What is WDL?\nWorkflow Description Language (WDL) is a way to describe a processing pipeline",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>WDL for you and me</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>WDL for you and me</span>"
     ]
   },
   {
     "objectID": "wdl_for_you_and_me.html#how-is-it-different-from-workflows-like-snakemake",
     "href": "wdl_for_you_and_me.html#how-is-it-different-from-workflows-like-snakemake",
-    "title": "4  WDL for you and me",
-    "section": "4.2 How is it different from workflows like Snakemake?",
-    "text": "4.2 How is it different from workflows like Snakemake?\nWDL leverages reproducible software environments called containers rather than relying on pre-installed software. File paths to installed software may not be consistent, and creating a combination of software packages that work on another system can be difficult.\nBy bundling software and their dependencies into a container, the same exact software environment can be reproduced across multiple machines and operating systems.\nTheoretically, given a WDL file, you should be able to reproduce and scale an analysis pipeline.",
+    "title": "5  WDL for you and me",
+    "section": "5.2 How is it different from workflows like Snakemake?",
+    "text": "5.2 How is it different from workflows like Snakemake?\nWDL leverages reproducible software environments called containers rather than relying on pre-installed software. File paths to installed software may not be consistent, and creating a combination of software packages that work on another system can be difficult.\nBy bundling software and their dependencies into a container, the same exact software environment can be reproduced across multiple machines and operating systems.\nTheoretically, given a WDL file, you should be able to reproduce and scale an analysis pipeline.",
     "crumbs": [
-      "<span class='chapter-number'>4</span>  <span class='chapter-title'>WDL for you and me</span>"
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>WDL for you and me</span>"
     ]
   },
   {
@@ -127,6 +127,56 @@
     "text": "2.1 Making Mistakes is OK\nI’ve learned that to get better, you have to be willing to make a lot of mistakes. This is especially true when you are learning to speak a new language.\nAgain, it’s OK not to know how to do things. We have to remember that we are all beginners at something and experts at other things. Let’s be respectful of that.",
     "crumbs": [
       "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+    ]
+  },
+  {
+    "objectID": "hpc_for_scientists.html",
+    "href": "hpc_for_scientists.html",
+    "title": "4  HPC for Scientists",
+    "section": "",
+    "text": "4.1 The main players",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
+    ]
+  },
+  {
+    "objectID": "hpc_for_scientists.html#the-main-players",
+    "href": "hpc_for_scientists.html#the-main-players",
+    "title": "4  HPC for Scientists",
+    "section": "",
+    "text": "Head Node: this node controls access to the other nodes in the cluster, which are called worker nodes\nWorker Node: a member of a HPC cluster\nAllocation: a set of nodes that meet a particular set of requirements that is requested by the user. For example, one kind of allocation might be to have 3 nodes with multiple GPUs for machine learning tasks.\nShared Filesystem - a distributed filesystem that can be seen by all of the nodes in a cluster. Examples include Lustre.\nScratch Filesystem - the “local” storage of a worker node",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
+    ]
+  },
+  {
+    "objectID": "hpc_for_scientists.html#relationships-between-the-main-players",
+    "href": "hpc_for_scientists.html#relationships-between-the-main-players",
+    "title": "4  HPC for Scientists",
+    "section": "4.2 Relationships between the main players",
+    "text": "4.2 Relationships between the main players\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
+    ]
+  },
+  {
+    "objectID": "hpc_for_scientists.html#an-hpc-workflow",
+    "href": "hpc_for_scientists.html#an-hpc-workflow",
+    "title": "4  HPC for Scientists",
+    "section": "4.3 An HPC workflow",
+    "text": "4.3 An HPC workflow\nHigh Performance Computing clusters are shared resources. We have to share computing resources with others.",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
+    ]
+  },
+  {
+    "objectID": "hpc_for_scientists.html#break-it-up",
+    "href": "hpc_for_scientists.html#break-it-up",
+    "title": "4  HPC for Scientists",
+    "section": "4.4 Break it Up",
+    "text": "4.4 Break it Up\nA lot of times, when we do genomics work, we want to process many files at a time. For example, we might want to",
+    "crumbs": [
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
     ]
   }
 ]

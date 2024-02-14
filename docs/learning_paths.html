@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>A DaSL Community Handbook - 2&nbsp; Learning Paths</title>
+<title>DaSL Community Handbook - 2&nbsp; Learning Paths</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="./">A DaSL Community Handbook</a> 
+      <a href="./">DaSL Community Handbook</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -126,8 +126,14 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="./hpc_for_scientists.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="./wdl_for_you_and_me.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">WDL for you and me</span></span></a>
+ <span class="menu-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">WDL for you and me</span></span></a>
   </div>
 </li>
     </ul>
@@ -196,7 +202,10 @@ ul.task-list li input[type="checkbox"] {
 <section id="learn-hpc-concepts" class="level2" data-number="2.4">
 <h2 data-number="2.4" class="anchored" data-anchor-id="learn-hpc-concepts"><span class="header-section-number">2.4</span> Learn HPC Concepts</h2>
 <p>We’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.</p>
-<p>Clusters are ruled by a <em>head node</em></p>
+<p>Clusters are ruled by a <em>head node</em>, which as you night guess, tells the other nodes (called <em>worker nodes</em> what to do. It does this by assigning <em>jobs</em> to groups of nodes. T3hese groups of nodes are also called <em>allocations</em>.</p>
+<p><em>Allocations</em> are requested by users when they <em>submit</em> a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.</p>
+<p><em>Jobs</em> can also have <em>subjobs</em>. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file</p>
+<p>The <em>Shared Filesystem</em> is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The <em>head node</em> is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called <em>scratch storage</em>) to run our job.</p>
 
 
 </section>

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>DaSL Community Handbook - 3&nbsp; Getting good with the Shell</title>
+<title>DaSL Community Handbook - 4&nbsp; HPC for Scientists</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./hpc_for_scientists.html" rel="next">
-<link href="./learning_paths.html" rel="prev">
+<link href="./wdl_for_you_and_me.html" rel="next">
+<link href="./getting_good_with_the_shell.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -81,7 +81,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./getting_good_with_the_shell.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting good with the Shell</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./hpc_for_scientists.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -120,13 +120,13 @@ ul.task-list li input[type="checkbox"] {
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./getting_good_with_the_shell.html" class="sidebar-item-text sidebar-link active">
+  <a href="./getting_good_with_the_shell.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting good with the Shell</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./hpc_for_scientists.html" class="sidebar-item-text sidebar-link">
+  <a href="./hpc_for_scientists.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></span></a>
   </div>
 </li>
@@ -146,7 +146,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#resources" id="toc-resources" class="nav-link active" data-scroll-target="#resources"><span class="header-section-number">3.1</span> Resources</a></li>
+  <li><a href="#the-main-players" id="toc-the-main-players" class="nav-link active" data-scroll-target="#the-main-players"><span class="header-section-number">4.1</span> The main players</a></li>
+  <li><a href="#relationships-between-the-main-players" id="toc-relationships-between-the-main-players" class="nav-link" data-scroll-target="#relationships-between-the-main-players"><span class="header-section-number">4.2</span> Relationships between the main players</a></li>
+  <li><a href="#an-hpc-workflow" id="toc-an-hpc-workflow" class="nav-link" data-scroll-target="#an-hpc-workflow"><span class="header-section-number">4.3</span> An HPC workflow</a></li>
+  <li><a href="#break-it-up" id="toc-break-it-up" class="nav-link" data-scroll-target="#break-it-up"><span class="header-section-number">4.4</span> Break it Up</a></li>
   </ul>
 </nav>
     </div>
@@ -155,7 +158,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting good with the Shell</span></h1>
+<h1 class="title"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></h1>
 </div>
 
 
@@ -172,40 +175,32 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<ol type="1">
-<li><strong>When you run something on the command-line, you don’t have to stay logged in.</strong> You’ve probably encountered the fact that running a script requires your connection to be open.</li>
-</ol>
-<p>Putting a <code>nohup</code> and adding an <code>ampersand</code> after the command will let you run it in the background and it will happily continue when you log out. For example, if I were running an R job, I could do the following:</p>
-<pre><code>nohup Rscript my_notebook.qmd &amp;</code></pre>
-<p><code>nohup</code> is short for “No hangup” and it will prevent the shell from terminating your process when you signout.</p>
-<p>Even better: learning how to use either <code>screen</code> or <code>tmux</code>, which are called window managers and can make your life even simpler. Both of these will let you persist a session even when you’re logged out.</p>
-<p>Even Even better: Scheduling your processes to cycle over files in the cluster.</p>
-<ol start="2" type="1">
-<li><strong><tab> and <up-arrow> are your friend.</up-arrow></tab></strong> This is probably the most useful timesave. Unix will try to autocomplete every time you hit tab with an unfinished path or command. For example, I could type:</li>
-</ol>
-<pre><code>ls /users/laderast/my_&lt;TAB&gt;</code></pre>
-<p>and Unix will try to complete this. Unix loves long filepaths, so save yourself some typing.</p>
-<p>Similarly, if you didn’t know that you can cycle through your previous commands using the <up-arrow> key, then try it out.</up-arrow></p>
-<ol start="3" type="1">
-<li><strong>How to install your own software on a Linux machine without root access.</strong> There are tools that exist such as Miniconda, that will let you install tools on a machine. Learning how to use this and how to add Miniconda binaries to your <code>$PATH</code> variable will get you very far.</li>
-</ol>
-<p>Even better: learning how to use Docker/Singularity, which lets you use those containers you may have heard so much about.</p>
-<ol start="4" type="1">
-<li>Using the right workflow tool for the right job.</li>
-</ol>
-<p>Getting strong at Linux is a lifelong process. The software ecosystem is extensive and everyone has an opinion about how to solve particular problems. I’ll try to highlight a <em>happy</em> path that is less confusing.</p>
-<ol start="5" type="1">
-<li>Moving from a script to workflow</li>
-</ol>
-<p>I think one of the hardest things when you are upskilling is realizing when a script could potentially be transformed into a workflow.</p>
-<section id="resources" class="level2" data-number="3.1">
-<h2 data-number="3.1" class="anchored" data-anchor-id="resources"><span class="header-section-number">3.1</span> Resources</h2>
-<p>The two best resources I can think of are:</p>
+<p>You may have started to access an HPC system</p>
+<p>I hope to give you a foundation of key HPC concepts and how they can help you.</p>
+<section id="the-main-players" class="level2" data-number="4.1">
+<h2 data-number="4.1" class="anchored" data-anchor-id="the-main-players"><span class="header-section-number">4.1</span> The main players</h2>
 <ul>
-<li><a href="https://missing.csail.mit.edu/">The Missing Semester of your CS Education</a></li>
-<li><a href="https://jeroenjanssens.com/dsatcl/">Data Science on the Command Line</a>.</li>
+<li><strong>Head Node</strong>: this node controls access to the other nodes in the cluster, which are called <em>worker nodes</em></li>
+<li><strong>Worker Node</strong>: a member of a HPC cluster</li>
+<li><strong>Allocation</strong>: a set of nodes that meet a particular set of requirements that is requested by the user. For example, one kind of allocation might be to have 3 nodes with multiple GPUs for machine learning tasks.</li>
+<li><strong>Shared Filesystem</strong> - a distributed filesystem that can be seen by all of the nodes in a cluster. Examples include Lustre.</li>
+<li><strong>Scratch Filesystem</strong> - the “local” storage of a worker node</li>
 </ul>
-<p>I plan on expanding my book <a href="https://laderast.github.io/bash_for_bioinformatics">Bash for Bioinformatics</a> with more recipes for those wanting to upskill to HPC and Workflow Description Language (WDL).</p>
+</section>
+<section id="relationships-between-the-main-players" class="level2" data-number="4.2">
+<h2 data-number="4.2" class="anchored" data-anchor-id="relationships-between-the-main-players"><span class="header-section-number">4.2</span> Relationships between the main players</h2>
+<p>Clusters are ruled by a <em>head node</em>, which as you night guess, tells the other nodes (called <em>worker nodes</em> what to do. It does this by assigning <em>jobs</em> to groups of nodes. T3hese groups of nodes are also called <em>allocations</em>.</p>
+<p><em>Allocations</em> are requested by users when they <em>submit</em> a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.</p>
+<p><em>Jobs</em> can also have <em>subjobs</em>. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file</p>
+<p>The <em>Shared Filesystem</em> is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The <em>head node</em> is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called <em>scratch storage</em>) to run our job.</p>
+</section>
+<section id="an-hpc-workflow" class="level2" data-number="4.3">
+<h2 data-number="4.3" class="anchored" data-anchor-id="an-hpc-workflow"><span class="header-section-number">4.3</span> An HPC workflow</h2>
+<p>High Performance Computing clusters are shared resources. We have to share computing resources with others.</p>
+</section>
+<section id="break-it-up" class="level2" data-number="4.4">
+<h2 data-number="4.4" class="anchored" data-anchor-id="break-it-up"><span class="header-section-number">4.4</span> Break it Up</h2>
+<p>A lot of times, when we do genomics work, we want to process many files at a time. For example, we might want to</p>
 
 
 </section>
@@ -600,13 +595,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./learning_paths.html" class="pagination-link  aria-label=" &lt;span="" paths&lt;="" span&gt;"="">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Learning Paths</span></span>
+      <a href="./getting_good_with_the_shell.html" class="pagination-link  aria-label=" &lt;span="" good="" with="" the="" shell&lt;="" span&gt;"="">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Getting good with the Shell</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./hpc_for_scientists.html" class="pagination-link" aria-label="<span class='chapter-number'>4</span>&nbsp; <span class='chapter-title'>HPC for Scientists</span>">
-        <span class="nav-page-text"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">HPC for Scientists</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./wdl_for_you_and_me.html" class="pagination-link" aria-label="<span class='chapter-number'>5</span>&nbsp; <span class='chapter-title'>WDL for you and me</span>">
+        <span class="nav-page-text"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">WDL for you and me</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
