@@ -58,3 +58,5 @@ What you can do now: visualize the flow of requesting an allocation, query the h
 
 
 ## WDL/Docker
+
+You're probably familiar with the issue of reproducing an analysis - a large part is reproducing the software environment that was used in the original analysis. The chain of software dependencies can affect whether or not a script can run in a different software environment. 
