@@ -29,7 +29,7 @@ Let's face it - almost none of us have formal training in using the Unix Shell. 
 
 Let's throw back the curtain once and for all - this is all knowledge you can pick up and excel at. 
 
-What you can do now: Run background processes while being signed out, navigate relative paths, use keyboard shortcuts such as tab completion and history. 
+**What you can do now:** Run background processes while being signed out, navigate relative paths, use keyboard shortcuts such as tab completion and history. 
 
 ## Bash Scripting to Automate the Boring Things
 
@@ -37,9 +37,7 @@ Now we have some skill navigating the shell and our file system. We can start th
 
 It all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command.  Once we learn that, we can start building larger pipelines to process files. 
 
-
-
-What you can do now: Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.
+**What you can do now:** Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.
 
 ## Up Your Knowledge about Filesystems
 
@@ -47,21 +45,21 @@ We want to learn recipes for listing files in a directory so we can process them
 
 We can extend our shell scripting skills to utilize a file manifest - a list of files we want to process - and process them with our homemade pipelines. 
 
-
 ## Learn HPC Concepts
 
 We've done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it. 
 
 We need to learn about the different types of nodes, how we can use them, and how to access software and data within the shared filesystem. 
 
-What you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.
+**What you can do now:** visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.
 
 ## WDL/Docker/Singularity
 
 Wow, we've come really far!
 
-
 You're probably familiar with the issue of reproducing an analysis - a large part is reproducing the software environment that was used in the original analysis. The chain of software dependencies can affect whether or not a script can run in a different software environment. 
 
 Enter containers, which let you freeze version of your software packages and environment so your scripts will run exactly as intended on any machine. This males your tools portable and is another step in making your work reproducible. 
+
+**What you can do now**: run your WDLized script on nearly any machine, including HPC clusters and cloud systems. 
 
