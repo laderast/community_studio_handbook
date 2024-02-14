@@ -43,7 +43,7 @@ What you can do now: Build simple pipelines gluing multiple software together. P
 
 ## Up Your Knowledge about Filesystems
 
-We want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders. 
+We want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders.  
 
 We can extend our shell scripting skills to utilize a file manifest - a list of files we want to process - and process them with our homemade pipelines. 
 
@@ -60,3 +60,5 @@ What you can do now: visualize the flow of requesting an allocation, query the h
 ## WDL/Docker
 
 You're probably familiar with the issue of reproducing an analysis - a large part is reproducing the software environment that was used in the original analysis. The chain of software dependencies can affect whether or not a script can run in a different software environment. 
+
+Enter containers, which let you freeze version of your software packages and environment so your scripts will run exactly as intended on any machine. This males your tools portable and is another step in making your work reproducible. 
