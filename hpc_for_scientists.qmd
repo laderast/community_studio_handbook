@@ -33,6 +33,7 @@ High Performance Computing clusters are shared resources. We have to share compu
 
 The main mechanism for sharing compute time equitably among users is the queue. THe queue contains a list of jobs and the compute requested for the job, whether it be a 96 core machine, or a 10 8 core machines. Based on the usage of others, the head node will order your submitted job in relation to other submitted jobs. 
 
+There is also a calculation based on the scarcity of a compute resource - if you request allocations with a large number of cores that are in demand, it will take longer to get your job done. 
 
 ## Break it Up
 
