@@ -28,7 +28,7 @@ Part of the purpose of listing these skills is to help you find a starting point
 Let's face it - almost none of us have formal training in using the Unix Shell. And yet there are some of us who seem like wizards at the shell - their commands and flle names seem to complete if by magic, and they can run jobs and sign-off without interrupting their jobs. 
 
 Let's throw back the curtain once and for all - this is all knowledge you can pick up and excel at. 
-
+ 
 **What you can do now:** Run background processes while being signed out, navigate relative paths, use keyboard shortcuts such as tab completion and history. 
 
 ## Bash Scripting to Automate the Boring Things
@@ -61,3 +61,8 @@ Enter containers, which let you freeze version of your software packages and env
 
 **What you can do now**: run your WDLized script on nearly any machine, including HPC clusters and cloud systems. 
 
+## Scattering your jobs
+
+A lot of what we do as bioinformaticists is process large folders of files, such as VCF files. Splitting up the work so that it runs on multiple machines is straightforward: we usually want to have a single node process one file at a time in our pipeline. 
+
+WDL gives us a mechanism to split up the data files: it's called scatter. 
