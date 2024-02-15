@@ -65,4 +65,4 @@ Enter containers, which let you freeze version of your software packages and env
 
 A lot of what we do as bioinformaticists is process large folders of files, such as VCF files. Splitting up the work so that it runs on multiple machines is straightforward: we usually want to have a single node process one file at a time in our pipeline. 
 
-WDL gives us a mechanism to split up the data files: it's called scatter. 
+WDL gives us a mechanism to split up the data files: it's called scatter. Scatter will divide up the data into independent subjobs that can be assigned to run. The nice thing about scatter is that it adapts to the type of computer architecture that you have: whether it be a single node. Multiple nodes in a HPC or multiple workers in the cloud, it will run appropriately. 
