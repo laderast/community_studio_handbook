@@ -35,6 +35,10 @@ The main mechanism for sharing compute time equitably among users is the queue. 
 
 There is also a calculation based on the scarcity of a compute resource - if you request allocations with a large number of cores that are in demand, it will take longer to get your job done. 
 
+Part of getting your jobs done effectively on HPC is breaking up your jobs into smaller subjobs that can be run on the most available nodes. 
+
+
+
 ## Break it Up
 
 A lot of times, when we do genomics work, we want to process many files at a time. For example, we might want to 
