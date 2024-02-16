@@ -54,7 +54,7 @@
     "href": "learning_paths.html#bash-scripting-to-automate-the-boring-things",
     "title": "2  Learning Paths",
     "section": "2.4 Bash Scripting to Automate the Boring Things",
-    "text": "2.4 Bash Scripting to Automate the Boring Things\nNow we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.\nIt all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.\nThen we can take a file manifest - a list of files we want to process - and process them with our homemade pipelines.\nWhat you can do now: Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.",
+    "text": "2.4 Bash Scripting to Automate the Boring Things\nNow we have some skill navigating the shell and our file system. We can start thinking about automating our work. We can take a list of files and process them with the same commands, we can schedule processes to run at night, and we can start adapting or R scripts to run on the command line.\nIt all starts with the parametrization of our scripts and learning how to pipe things: taking the output of one command and using it as the input for another command. Once we learn that, we can start building larger pipelines to process files.\nWhat you can do now: Build simple pipelines gluing multiple software together. Process a file with a script using our pipeline. Install software to a system without root access.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -64,7 +64,7 @@
     "href": "learning_paths.html#learn-hpc-concepts",
     "title": "2  Learning Paths",
     "section": "2.6 Learn HPC Concepts",
-    "text": "2.6 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.\nWhat you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.",
+    "text": "2.6 Learn HPC Concepts\nWe’ve done everything so far on a single computer - now we can graduate to the HPC cluster. We need to learn a bit about the architecture of the cluster and how to use it.\nWe need to learn about the different types of nodes, how we can use them, and how to access software and data within the shared filesystem.\nWhat you can do now: visualize the flow of requesting an allocation, query the head node to see how busy the cluster is, understand our place in a job queue and how we can speed up processing jobs.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
@@ -134,7 +134,7 @@
     "href": "hpc_for_scientists.html",
     "title": "4  HPC for Scientists",
     "section": "",
-    "text": "4.1 The main players",
+    "text": "4.1 The main players\nBefore we go any further, let’s talk about the key players in a High Performance Computing (hpc) system:",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
     ]
@@ -154,7 +154,7 @@
     "href": "hpc_for_scientists.html#relationships-between-the-main-players",
     "title": "4  HPC for Scientists",
     "section": "4.2 Relationships between the main players",
-    "text": "4.2 Relationships between the main players\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. T3hese groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.",
+    "text": "4.2 Relationships between the main players\nClusters are ruled by a head node, which as you night guess, tells the other nodes (called worker nodes what to do. It does this by assigning jobs to groups of nodes. These groups of nodes are also called allocations.\nAllocations are requested by users when they submit a job to the head node. Jobs consist of a script or command with software, data to process, and an allocation. Based on the usage and what nodes are available, the head node places the jobs in a queue. If an allocation is available, then the job gets moved from the queue to the allocation.\nJobs can also have subjobs. This is useful because we often want a multiple nodes to process separate files in a job, where a single node can process a single file\nThe Shared Filesystem is readable and writeable by all nodes in the HPC cluster, which means that we can store our data and results there. The head node is responsible for all transfers into and out of the shared filesystem. In very special cases, we need to use local storage (also called scratch storage) to run our job.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
     ]
@@ -164,7 +164,7 @@
     "href": "hpc_for_scientists.html#an-hpc-workflow",
     "title": "4  HPC for Scientists",
     "section": "4.3 An HPC workflow",
-    "text": "4.3 An HPC workflow\nHigh Performance Computing clusters are shared resources. We have to share computing resources with others.",
+    "text": "4.3 An HPC workflow\nHigh Performance Computing clusters are shared resources. We have to share computing resources with others.\nThe main mechanism for sharing compute time equitably among users is the queue. THe queue contains a list of jobs and the compute requested for the job, whether it be a 96 core machine, or a 10 8 core machines. Based on the usage of others, the head node will order your submitted job in relation to other submitted jobs.\nThere is also a calculation based on the scarcity of a compute resource - if you request allocations with a large number of cores that are in demand, it will take longer to get your job done.\nPart of getting your jobs done effectively on HPC is breaking up your jobs into smaller subjobs that can be run on the most available nodes.",
     "crumbs": [
       "<span class='chapter-number'>4</span>  <span class='chapter-title'>HPC for Scientists</span>"
     ]
@@ -194,7 +194,27 @@
     "href": "learning_paths.html#up-your-knowledge-about-filesystems",
     "title": "2  Learning Paths",
     "section": "2.5 Up Your Knowledge about Filesystems",
-    "text": "2.5 Up Your Knowledge about Filesystems\nWe want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders.",
+    "text": "2.5 Up Your Knowledge about Filesystems\nWe want to learn recipes for listing files in a directory so we can process them. We also want to learn how to traverse multiple directories and store our results in separate folders.\nWe can extend our shell scripting skills to utilize a file manifest - a list of files we want to process - and process them with our homemade pipelines.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#wdldocker",
+    "href": "learning_paths.html#wdldocker",
+    "title": "2  Learning Paths",
+    "section": "2.7 WDL/Docker",
+    "text": "2.7 WDL/Docker\nYou’re probably familiar with the issue of reproducing an analysis - a large part is reproducing the software environment that was used in the original analysis. The chain of software dependencies can affect whether or not a script can run in a different software environment.\nEnter containers, which let you freeze version of your software packages and environment so your scripts will run exactly as intended on any machine. This males your tools portable and is another step in making your work reproducible.\nWhat you can do now: run your WDLized script on nearly any machine, including HPC clusters and cloud systems.",
+    "crumbs": [
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
+    ]
+  },
+  {
+    "objectID": "learning_paths.html#scattering-your-jobs",
+    "href": "learning_paths.html#scattering-your-jobs",
+    "title": "2  Learning Paths",
+    "section": "2.8 Scattering your jobs",
+    "text": "2.8 Scattering your jobs\nA lot of what we do as bioinformaticists is process large folders of files, such as VCF files. Splitting up the work so that it runs on multiple machines is straightforward: we usually want to have a single node process one file at a time in our pipeline.\nWDL gives us a mechanism to split up the data files: it’s called scatter will divide up the data into independent subjobs that can be assigned to run. The nice thing about scatter is that it adapts to the type of computer architecture that you have: whether it be a single node. Multiple nodes in a HPC or multiple workers in the cloud, it will run appropriately.\nThis does require that the system we’re working on is configured correctly.",
     "crumbs": [
       "<span class='chapter-number'>2</span>  <span class='chapter-title'>Learning Paths</span>"
     ]
