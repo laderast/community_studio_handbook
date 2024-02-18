@@ -10,6 +10,8 @@ This chapter exists to help you find out what you know and what you might want t
 
 ## A Learning Path to HPC
 
+
+
 It took me a long while to pick up these skills. I spent a long time reading documentation. Part of what drove me was the desire to teach others.   
 
 I think that there are multiple skills and levels that we need to build to be effective and reproducible with HPC. Here's the list:
